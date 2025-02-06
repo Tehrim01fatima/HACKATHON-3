@@ -19,6 +19,7 @@ const Page = () => {
     async function fetchProduct() {
       try {
         const fetchedProducts: Products[] = await client.fetch(allProducts);
+        console.log(fetchedProducts)
         setProducts(fetchedProducts);
       } catch (err) {
         setError("Failed to load products.");
@@ -41,29 +42,34 @@ const Page = () => {
       timer: 1000,
     });
     addToCart(product);
+   
+    
+  console.log(product)
+    
   };
-
+  
   // Render products
   const renderProducts = () => {
     if (products.length === 0) {
       return <p className="text-center text-lg text-gray-500">No products found</p>;
     }
-
+    
     return products.map((product) => (
       <div
-        key={product._id}
-        className="flex flex-col gap-4 w-4/5 mx-auto my-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow relative"
+      key={product._id}
+      className="flex flex-col gap-4 w-4/5 mx-auto my-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow relative"
       >
+         
         <Link href={`/product/${product.slug?.current}`} className="block">
           <div className="relative">
             {product.image ? (
               <Image
-                src={urlFor(product.image).width(312).height(312).url()}
+              src={urlFor(product.image).width(312).height(312).url()}
                 alt={product.title}
                 className="w-full object-cover"
                 width={312}
                 height={312}
-              />
+                />
             ) : (
               <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">
                 No Image
@@ -86,13 +92,13 @@ const Page = () => {
               width={30}
               height={30}
               className="inline-block"
-            />
+              />
           </button>
         </div>
       </div>
     ));
   };
-
+  
   return (
     <section className="w-full px-4 py-[7rem] md:px-6">
       <div className="mx-auto max-w-7xl">

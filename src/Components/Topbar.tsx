@@ -17,7 +17,7 @@ const Topbar = () => {
             <span>Eng</span>
             <ChevronDown />
           </li>
-          <Link href="/faq">
+          <Link href="/Faqs">
             <li className="cursor-pointer">FAQs</li>
           </Link>
           <li className="flex items-center space-x-2 cursor-pointer">
