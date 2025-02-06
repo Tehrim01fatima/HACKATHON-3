@@ -80,16 +80,7 @@ export default function OurProducts() {
         {products.map((product) => (
           <div key={product.id} className="group relative rounded-lg bg-white overflow-hidden shadow-lg transition-all duration-300 transform hover:scale-105">
             <div className="relative aspect-square">
-              {product.isNew && (
-                <Badge className="absolute left-3 top-3 bg-emerald-500 hover:bg-emerald-600">
-                  New
-                </Badge>
-              )}
-              {product.isSale && (
-                <Badge className="absolute left-3 top-3 bg-orange-500 hover:bg-orange-600">
-                  Sales
-                </Badge>
-              )}
+             
               <Link href={`/components/productDescription/${product.id}`}>
                 <Image
                   src={product.image}

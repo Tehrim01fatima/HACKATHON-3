@@ -91,7 +91,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               alt={product.title}
               height={500}
               width={500}
-              className="rounded-lg shadow-md"
+              className="rounded-lg !w-auto !h-auto shadow-md"
             />
           )}
         </div>

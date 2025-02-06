@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutHero = () => {
   return (
@@ -17,7 +18,9 @@ const AboutHero = () => {
         </p>
         <div className="pl-4 lg:pl-4">
           <button className="bg-[rgba(249,249,249,0.15)] text-white px-6 sm:px-8 py-3 sm:py-4 text-[14px] sm:text-[16px] font-normal w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2e6a6d]">
+           <Link href={"/Shop"}>
             View Collection
+           </Link>
           </button>
         </div>
       </section>
