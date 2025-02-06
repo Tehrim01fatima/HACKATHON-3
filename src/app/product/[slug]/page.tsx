@@ -70,7 +70,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     return (
       <div className="max-w-7xl mx-auto px-4 text-center py-10">
         <h1 className="text-4xl font-bold">Product Not Found</h1>
-        <p className="text-lg mt-4">Sorry, we couldn't find the product.</p>
+        <p className="text-lg mt-4">Sorry, we couldn&lsquo;t find the product.</p>
       </div>
     );
   }
