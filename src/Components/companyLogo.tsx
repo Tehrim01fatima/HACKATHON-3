@@ -12,7 +12,7 @@ const CompanyLogo = () => {
           <Image src="/pictures/pipedrive.png" alt="Pipedrive Logo" width={107} height={109} />
         </div>
         <div className="flex justify-center items-center">
-          <Image src="/pictures/logo(5).webp" alt="Cib Bank Logo" width={135} height={139} />
+          <Image src="/pictures/Logo(5).webp" alt="Cib Bank Logo" width={135} height={139} />
         </div>
         <div className="flex justify-center items-center">
           <Image src="/pictures/company logo (2).png" alt="Company 4 Logo" width={63} height={65} />
