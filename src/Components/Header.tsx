@@ -20,9 +20,7 @@ const Header = () => {
           <button className="flex items-center space-x-2 bg-white py-2 px-4 rounded-md mr-3">
             <FaShoppingCart className="text-xl" />
             <span className="hidden sm:inline text-sm">Cart</span>
-            <div className="flex items-center justify-center w-6 h-6 bg-[#007580] text-white text-xs sm:text-sm rounded-full">
-              2
-            </div>
+            
           </button>
         </Link>
       </div>

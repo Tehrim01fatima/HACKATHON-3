@@ -8,6 +8,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { addToCart } from "@/app/Actions/action";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 interface ProductPageProps {
@@ -82,11 +83,22 @@ export default function ProductPage({ params }: ProductPageProps) {
     );
   }
 
-  const handleShopNow = () => {
-    addToCart(product);
-    router.push("/cart");
-  };
-
+   const handleShopNow = (e: React.MouseEvent, product: Products) => {
+      e.preventDefault();
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: `${product.title} added to Cart`,
+        showConfirmButton: false,
+        timer: 1000,
+      });
+      addToCart(product);
+     
+      
+    console.log(product)
+      
+    };
+    
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -109,7 +121,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           <p className="text-2xl font-sans">${product.price}</p>
           <p className="text-lg">{product.description}</p>
           <button
-            onClick={handleShopNow}
+            onClick={(e) => handleShopNow (e, product)}
             className="w-full sm:w-[334.67px] h-[60px] rounded-[30px] text-white bg-[#029FAE] hover:bg-[#027C87] transition"
           >
             Shop Now
