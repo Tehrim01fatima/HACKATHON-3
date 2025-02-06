@@ -1,7 +1,7 @@
 import { Products } from "../../../types/products";
 
 export const addToCart = (product: Products) => {
-    const cart: Products[] = JSON.parse(localStorage.getItem('cart') || '[]');
+    const cart: Products[] = JSON.parse(localStorage.getItem('Cart') || '[]');
     const existingProductIndex = cart.findIndex(item => item._id === product._id);
 
     if (existingProductIndex > -1) {
